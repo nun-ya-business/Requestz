@@ -1,0 +1,204 @@
+<html>
+
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <style>
+    body {
+   background: linear-gradient(to left top,#24C6DC , #514A9D) fixed;
+   text-align:center;
+   color: black;
+ }
+#subtext{
+   display: block;
+   color:Green;
+}
+h2 {
+  color: white;
+}
+
+  </style>
+    <title>Requestz</title>
+  </head>
+
+  <body>
+  
+    <div class="page-header" style="background-color: white;">
+    <img src= "http://i.imgur.com/1Dat2jZ.png">
+      <h1 id="company">Requestz <small id="subtext">We help each other help!</small></h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5">
+          <h2>Can Help</h2>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+            requestz to give help
+          </button>
+<div class="row">
+            <br/>
+            <div id="find2">
+          </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Requestz</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="form-inline">
+                  <div class="form-group">
+                      <label for="exampleInputName2">Who</label>
+                      <input type="text" class="form-control" id="who1" placeholder="Enter Who We Can Help With">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputName2">What</label>
+                      <input type="text" class="form-control" id="what1" placeholder="Enter What We Can Help With">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail2">When</label>
+                      <input type="email" class="form-control" id="when1" placeholder="Enter When We Can Help With">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputName2">Where</label>
+                      <input type="text" class="form-control" id="where1" placeholder="Enter Where Can We Help With">
+                    </div>
+                   <button type="submit" class="btn btn-default" id="submit1">Submit request</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+         <!-- Modal -->
+          <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Requestz</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="form-inline">
+                  <div class="form-group">
+                      <label for="exampleInputName2">Who</label>
+                      <input type="text" class="form-control" id="who2" placeholder="Enter Who Needs Help">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputName2">What</label>
+                      <input type="text" class="form-control" id="what2" placeholder="Enter What do you need help with">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail2">When</label>
+                      <input type="email" class="form-control" id="when2" placeholder="Enter When do you need help">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputName2">Where</label>
+                      <input type="text" class="form-control" id="where2" placeholder="Enter Where Can We Help With">
+                    </div>
+                   <button type="submit" class="btn btn-default" id="submit2">Submit request</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-5">
+          <h2>Need Help</h2>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
+            requestz to get help
+          </button>
+          <div class="row">
+            <br/>
+            <div id="find1">
+          </div>
+         
+         
+         </div>
+         
+         </div>
+
+
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+
+<script>
+  $("#submit1").click(function (){
+    $("#find1").append(
+        '<div class="panel panel-primary"> <div class="panel-heading"> <div class="row"> <div class="col-xs-8">' +
+        
+        $("#who1").val() + 
+        
+        ' needs help with:</div> </div> </div> <div class="panel-body"> <div class="row"><div class="col-xs-12"> <h4>' +
+        $("#what1").val() + 
+       
+        '</h4></div></div></div><div class="panel-footer"><div class="row"><div class="col-xs-4 "><p style="padding-top:10px" class="pull-center"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> ' +
+        
+        $("#when1").val() + 
+        
+        '</p></div><div class="col-xs-4"><p style="padding-top:10px" class="pull-center"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> ' +
+         
+         $("#where1").val() +
+         
+         '</p></div><div class="col-xs-4"> <button class= "btn btn-default pull-right" >Help '  +
+         
+         $("#who1").val() +
+         
+         '</button></div></div></div></div>'
+         
+    
+    );
+});
+
+$("#submit2").click(function (){
+    $("#find2").append(
+        '<div class="panel panel-primary"> <div class="panel-heading"> <div class="row"> <div class="col-xs-8">' +
+        
+        $("#who2").val() + 
+        
+        ' can help with:</div> </div> </div> <div class="panel-body"> <div class="row"><div class="col-xs-12"> <h4>' +
+        $("#what2").val() + 
+       
+        '</h4></div></div></div><div class="panel-footer"><div class="row"><div class="col-xs-4 "><p style="padding-top:10px" class="pull-center"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> ' +
+        
+        $("#when2").val() + 
+        
+        '</p></div><div class="col-xs-4"><p style="padding-top:10px" class="pull-center"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> ' +
+         
+         $("#where2").val() +
+         
+         '</p></div><div class="col-xs-4"> <button class= "btn btn-default pull-right" > Ask '  +
+         
+         $("#who2").val() +
+         
+         '</button></div></div></div></div>'
+         
+    
+    );
+});
+
+
+</script>
+  </body>
+
+</html>
